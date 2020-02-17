@@ -4,3 +4,4 @@ Implemented famous algorithms in javascript.
 - Bubble sort
 - Selection sort
 - Insertion sort
+- Merge sort
