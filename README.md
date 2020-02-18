@@ -5,3 +5,4 @@ Implemented famous algorithms in javascript.
 - Selection sort
 - Insertion sort
 - Merge sort
+- Quick sort
