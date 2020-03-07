@@ -49,6 +49,38 @@ class BinarySearchTree {
         return findRecursive(this.root, value);
 
     }
+
+    breathFirstSearch() {
+        let queue = [];
+        let visited = [];
+
+        let node = this.root;
+
+        queue.push(node);
+
+        while (queue.length) {
+            node = queue.shift();
+            visited.push(node.value);
+
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right);
+        }
+
+        return visited;
+    }
+
+    depthFirstPreorderSearch() {
+        let visited = [];
+        let current = this.root;
+
+        function doTraverse(node) {
+            visited.push(node.value);
+            if(node.left) doTraverse(node.left);
+            if(node.right) doTraverse(node.right);
+        }
+        doTraverse(current);
+        return visited;
+    }
 };
 
 class Node {
